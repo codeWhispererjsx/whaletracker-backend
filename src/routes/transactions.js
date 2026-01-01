@@ -1,6 +1,8 @@
-const express = require('express');
+
+import express from 'express';
+import { getRecentTransactions } from '../services/whaleService.js';
+
 const router = express.Router();
-const { getRecentTransactions } = require('../services/whaleService');
 
 router.get('/api/whale-transactions', async (req, res) => {
   try {
@@ -11,4 +13,4 @@ router.get('/api/whale-transactions', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
